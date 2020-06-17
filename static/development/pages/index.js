@@ -9,5 +9,7 @@ import './../components/module/form_errors'
 
 // script pages
 import './../components/common_componentc/header/index'
+import './../components/common_componentc/footer/index'
 import './../components/pages/index/index'
+
 

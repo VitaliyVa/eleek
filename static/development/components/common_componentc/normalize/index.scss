@@ -21,9 +21,7 @@ $legacy_browser_support: false !default;
   line-height: 1.2;
 }
 
-*::-webkit-scrollbar {
-  width: 6px;
-}
+ 
 button {
   border: none;
   outline: none;
@@ -167,6 +165,10 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
 }
 
 @if $legacy_browser_support {

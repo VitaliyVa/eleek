@@ -15,12 +15,7 @@ $(function () {
 
 function Onload() {
 
-  valide_form('#brief_st', '.input', false);
-  valide_form('#contacts', '.input', true);
-  valide_form('#feedback_smal', '.input', true);
-  valide_form('#contacts', '.input', true);
-  valide_form('#contact_seo', '.input', true);
-
+  valide_form('.footer_form', '.inp-vak-wrap', true);
 
 }
 
@@ -71,82 +66,28 @@ function valide_form(id_form, append_error_box, check_request) {
         name: {
           required: true,
         },
-        username: {
-          required: true,
-        },
-        password: {
+        user_send: {
           required: true,
         },
         email: {
           required: true,
           email: true,
         },
-        user_last_name: {
-          required: true,
-        },
-        product_rating: {
-          required: true,
-        },
-        payment: {
-          required: true,
-        },
-        phone: {
-          required: true,
-        },
-        address: {
-          required: true,
-        },
-        pass: {
-          required: true,
-        },
-        repeat_pass: {
-          required: true,
-        },
-        text: {
-          required: true,
-        },
+       
       },
 
       messages: {
-        username: {
-          required: errore_text.required,
-
-        },
-        password: {
-          required: errore_text.required,
-        },
-        name: {
-          required: errore_text.required,
-          email: errore_text.email
-        },
         email: {
           required: errore_text.required,
           email: errore_text.email
         },
-        user_last_name: {
+        name: {
           required: errore_text.required,
         },
-        payment: {
+        user_send: {
           required: errore_text.required,
         },
-        product_rating: {
-          required: errore_text.rating,
-        },
-        phone: {
-          required: errore_text.required,
-        },
-        address: {
-          required: errore_text.required,
-        },
-        pass: {
-          required: errore_text.required,
-        },
-        repeat_pass: {
-          required: errore_text.required,
-        },
-        text: {
-          required: errore_text.required,
-        },
+       
       },
 
       submitHandler: function (form) {
