@@ -19,7 +19,7 @@
 .bike_trailer {
     &__wrapper {
         position: relative;
-        overflow: hidden;
+        
     }
     &__block {
         padding-top: 65px;
@@ -103,6 +103,98 @@
     margin-left: 95px;
 
 }
+
+.slide-name {
+    position: relative;
+    transition: all .6s;
+    
+    animation-duration: 1s;
+    animation-name: anim_start_text;
+  }
+
+  .anim_text {
+    position: relative;
+    transition: all .6s;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-name: anim_end_text;
+  }
+  @keyframes anim_start_text {
+    0% {
+      opacity: 0;
+      left: -100%;
+    }
+    50% {
+      
+    }
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+  }
+//   @keyframes anim_end_text {
+//     0% {
+//       opacity: 0;
+//       left: 200%;
+//     }
+//     50% {
+      
+//     }
+//     100% {
+//         left: -100%;
+//         opacity: 1;
+//     }
+//   }
+
+  .slide-img {
+    position: relative;
+    animation-duration: 1.5s;
+    animation-name: anim_start_img;
+  }
+  .anim_img {
+    position: relative;
+    opacity: 0;
+    //   transition: all .2s;
+    //   right: -100%;
+    animation-duration: 1.5s;
+    animation-name: anim_end_img;
+  }
+  
+  @keyframes anim_start_img {
+    0% {
+    //   opacity: 0;
+      right: -100%;
+    }
+    50% {
+      
+    }
+    100% {
+        right: 0%;
+        // opacity: 1;
+    }
+  }
+//   @keyframes anim_end_img {
+//     0% {
+//     //   opacity: 0;
+//       right: 0%;
+//     }
+//     50% {
+//     }
+//     100% {
+//       right: 200%;
+//       opacity: 1;
+//     }
+//   }
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1309px) {
     .first_section {
         height: 100%;

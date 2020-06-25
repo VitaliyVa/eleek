@@ -535,6 +535,8 @@ $(function () {
 
 function Onload() {
   valide_form('.footer_form', '.inp-vak-wrap', true);
+  valide_form('#comment_form', '.inp-vak-wrap', true);
+  valide_form('.registery_form', '.inp-vak-wrap', false);
 }
 
 function location_leng() {
@@ -588,6 +590,12 @@ function valide_form(id_form, append_error_box, check_request) {
         user_send: {
           required: true
         },
+        password: {
+          required: true
+        },
+        phone: {
+          required: true
+        },
         email: {
           required: true,
           email: true
@@ -599,6 +607,12 @@ function valide_form(id_form, append_error_box, check_request) {
           email: errore_text.email
         },
         name: {
+          required: errore_text.required
+        },
+        phone: {
+          required: errore_text.required
+        },
+        password: {
           required: errore_text.required
         },
         user_send: {
@@ -617,6 +631,7 @@ function valide_form(id_form, append_error_box, check_request) {
           if (all_form_input.hasOwnProperty(key)) {
             var element = all_form_input[key];
             console.log(element.type);
+            $.fancybox.close();
           }
         }
 
@@ -822,7 +837,7 @@ if (slickFinder1 >= 1) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     prevArrow: '<div class="slick-first"><</div>',
     nextArrow: '<div class="slick-second">></div>',
@@ -848,11 +863,8 @@ if (slickFinder1 >= 1) {
     $('.line_active').css('width', "".concat(reuslt, "%"));
   });
   $('.bike_trailer__block').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    console.log('nextSlide: ', nextSlide);
-    console.log('slick: ', slick);
-    console.log('event: ', event);
-    console.log('currentSlide: ', currentSlide);
-    console.log(32323);
+    $('.slide-name').css('left', '0%');
+    $('.slick-active .slide-name').css('left', '-150%');
   }); //
 
   var currSlide = 0;

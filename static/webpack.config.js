@@ -5,7 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const isDev = process.env.NODE_ENV == 'development';
 const isProd = !isDev;
 
-const optimization = () =>{
+const optimization = () => {
     const config = {
 
     }
@@ -39,6 +39,17 @@ module.exports = {
     context: path.resolve(__dirname,'development/pages') ,
     entry:{
         index:  './index.js' ,
+        item:  './item.js' ,
+        items:  './items.js' ,
+        order:  './order.js' ,
+        shop:  './shop.js' ,
+        search:  './search.js' ,
+        login:  './login.js' ,
+        registration:  './registration.js' ,
+        changePass:  './changePass.js' ,
+        drive:  './drive.js' ,
+        about:  './about.js' ,
+        profile:  './profile.js' ,
     },
     output:{
         filename:'[name]/index.js',

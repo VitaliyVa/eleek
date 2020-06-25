@@ -6,7 +6,16 @@ main{
     max-width: 1440px;
     margin: 0 auto;
 }
+.padding_sect {
+    padding-top: 100px;
+}
 
+.absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
     
 //  тут шрифти Oswald ==================>
 .main__title {
@@ -38,6 +47,31 @@ main{
     &_5 {
         font-size: 18px;
     }
+    &_6 {
+        font-size: 14px;
+    }
+}
+//  тут шрифти Oswald 400 ==================>
+
+.standart_title {
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.08;
+    letter-spacing: normal;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    &_3 {
+        font-size: 24px;
+    }
+    &_4 {
+        font-size: 18px;
+    }
+    &_5 {
+        font-size: 16px;
+    }
+    &_6 {
+        font-size: 14px;
+    }
 }
 
 
@@ -55,6 +89,20 @@ main{
     }
     &_2 {
         font-size: 16px;
+    }
+    &_3 {
+        font-size: 14px;
+    }
+}
+
+// тут шрифти Lato 700  ==================>
+.main_sub_title {
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    &_3 {
+        font-size: 18px;
     }
 }
 
@@ -105,7 +153,9 @@ main{
     &_black {
         color: #3d3c3a;
     }
-    
+    &_black_2 {
+        color: #8d8d8d;
+    }
     &_white {
         color: #fff;
     }
@@ -124,6 +174,17 @@ main{
     font-size: 13px;
 }
 
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    transition: all .2s;
+    background-color: #ffd10a !important;
+}
+@media (max-width: 1460px) { 
+    .container {
+        max-width: unset;
+        width: 85%;
+        margin: 0 auto;
+    }
+}
 @media (max-width: 1309px) { 
     .main__title {
         &_1 {
@@ -159,9 +220,30 @@ main{
         }
     }
 }
+@media (max-width: 602px) {
+    .btn_standart {
+        font-size: 13px;
+    }
+    .main__title {
+        &_2 {
+            font-size: 35px;
+        }
+    }
+}
+@media (max-width: 533px) {
+    .padding_sect {
+        padding-top: 60px;
+    }
+}
 @media (max-width: 470px) {
+    .standart_title_3 {
+        font-size: 16px;
+    }
     .main__title_1 {
         font-size: 25px;
+    }
+    .main__title_3 {
+        font-size: 29px;
     }
 }
 

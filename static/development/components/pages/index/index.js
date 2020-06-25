@@ -6,7 +6,6 @@ import './five_section.scss';
 import './six_section.scss';
 
 
-
 var slickFinder1 = $('.bike_trailer__block').length;
   if (slickFinder1 >= 1) {
     $('.bike_trailer__block').on('init', function(event, slick) {
@@ -19,7 +18,7 @@ var slickFinder1 = $('.bike_trailer__block').length;
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         arrows: true,
         prevArrow: '<div class="slick-first"><</div>',
         nextArrow: '<div class="slick-second">></div>',
@@ -49,11 +48,8 @@ var slickFinder1 = $('.bike_trailer__block').length;
       });
 
       $('.bike_trailer__block').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        console.log('nextSlide: ', nextSlide);
-        console.log('slick: ', slick);
-        console.log('event: ', event);
-        console.log('currentSlide: ', currentSlide);
-          console.log(32323);
+        $('.slide-name').css('left', '0%');
+        $('.slick-active .slide-name').css('left', '-150%');
       });
       //
      

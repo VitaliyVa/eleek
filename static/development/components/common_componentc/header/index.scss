@@ -592,7 +592,7 @@
 .black_bg {
   position: absolute;
   top: 0;
-  left: -200vh;
+  left: -200vw;
   width: 100%;
   height: 100vh;
   background-color: #3d3c3a;
@@ -668,6 +668,7 @@
   &_input {
     border: none;
     outline: none;
+    background: transparent;
   }
   &_del {
     cursor: pointer;
@@ -745,24 +746,6 @@ input::-webkit-inner-spin-button {
 }
 
 
-
-
-.slide-name {
-  transition: all .2s;
-  opacity: 1;
-}
-.anim_text {
-  opacity: 0;
-}
-.slide-img {
-  position: relative;
-  right: 0;
-  transition: all .2s;
-
-}
-.anim_img {
-  right: -100%;
-}
 
 .modal_search_close {
   cursor: pointer;

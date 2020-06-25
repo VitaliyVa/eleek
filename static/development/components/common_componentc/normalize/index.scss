@@ -527,6 +527,12 @@ fieldset {
  * 4. Corrects alignment displayed oddly in IE 6/7.
  */
 
+ .standart_container {
+   padding: 100px 44px 0px 44px;
+ }
+ .tab_container {
+  padding: 0px 44px 0px 44px;
+ }
 legend {
   border: 0; /* 1 */
   padding: 0; /* 2 */

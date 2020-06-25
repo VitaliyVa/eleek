@@ -14,8 +14,10 @@ $(function () {
  **/
 
 function Onload() {
-
+  
   valide_form('.footer_form', '.inp-vak-wrap', true);
+  valide_form('#comment_form', '.inp-vak-wrap', true);
+  valide_form('.registery_form', '.inp-vak-wrap', false);
 
 }
 
@@ -69,6 +71,12 @@ function valide_form(id_form, append_error_box, check_request) {
         user_send: {
           required: true,
         },
+        password: {
+          required: true,
+        },
+        phone: {
+          required: true,
+        },
         email: {
           required: true,
           email: true,
@@ -82,6 +90,12 @@ function valide_form(id_form, append_error_box, check_request) {
           email: errore_text.email
         },
         name: {
+          required: errore_text.required,
+        },
+        phone: {
+          required: errore_text.required,
+        },
+        password: {
           required: errore_text.required,
         },
         user_send: {
@@ -104,7 +118,7 @@ function valide_form(id_form, append_error_box, check_request) {
           if (all_form_input.hasOwnProperty(key)) {
             const element = all_form_input[key];
             console.log(element.type );
-            
+            $.fancybox.close();
           }
         }
 
@@ -133,6 +147,7 @@ function valide_form(id_form, append_error_box, check_request) {
                 if (typeof data['redirect_url'] !== "undefined" && data.redirect_url != '') {
                   clear_input()
                   location.href = data.redirect_url;
+
                 } else {
                   // sayHi();
                 }
